@@ -6,7 +6,6 @@ const getEntityLocation = (entity) => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     let rootDirectory = __dirname;
-    console.log("RD", rootDirectory)
     while (path.basename(rootDirectory) !== 'src') {
         rootDirectory = path.dirname(rootDirectory);
     }

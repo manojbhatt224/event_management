@@ -1,20 +1,4 @@
-[
-    {
-        "id": "1",
-        "username": "manojbhatt224",
-        "password": "password123",
-        "email": "manojexample@gmail.com",
-        "firstName": "Manoj",
-        "lastName": "Bhatt",
-        "createdAt": "2024-06-05T12:00:00.000Z"
-    },
-    {
-        "id": "2",
-        "username": "sahadev224",
-        "password": "123password",
-        "email": "sahadevexample@gmail.com",
-        "firstName": "Sahadev",
-        "lastName": "Kunwar",
-        "createdAt": "2024-06-05T12:30:00.000Z"
-    }
-]
+[{"id": "1", "username": "manojbhatt224", "password": "password123", "email": "manojexample@gmail.com", "firstName": "Manoj", "lastName": "Bhatt", "createdAt": "2024-06-05T12:00:00.000Z"},
+{"id":"95f6e8c1-4c22-45a7-ae11-44c3c3f63c06","username":"kapil123","password":"kapil000","email":"kapil@gmail.com","firstName":"Kapi","lastName":"Bhatt","createdAt":"2024-06-06T04:53:39.783Z"},
+{"id":"dae9600a-95c2-4394-ae94-c21f1237afed","username":"kapil@123","password":"kapil000","email":"kapil@gmail.com","firstName":"Kapi","lastName":"Bhatt","createdAt":"2024-06-06T05:42:34.786Z"},
+{"id":"e21aef2c-d2a7-4fb3-af9b-845f89377195","username":"kapil@12356","password":"kapil000","email":"kapil@gmail.com","firstName":"Kapi","lastName":"Bhatt","createdAt":"2024-06-06T05:43:06.033Z"}]
