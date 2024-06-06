@@ -13,7 +13,12 @@ const userDAO = {
 
     findUserByUsernameAndPassword(username, password) {
         const users = this.readUsers();
-        return users.find(user => user.username === username && user.password === password);
+        const user=users.find(user => user.username === username && user.password === password);
+        if (user) {
+            const { password, ...userWithoutPassword } = user;
+            return userWithoutPassword;
+        }
+        return null;
     }
 };
 
