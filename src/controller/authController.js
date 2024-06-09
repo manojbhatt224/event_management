@@ -29,6 +29,18 @@ class AuthController {
       }
     }
   }
+  static async refreshToken(req, res) {
+    const client_refreshtoken = req.headers.authorization?.split(" ")[1];
+    if (!client_refreshtoken) {
+        res.sendData(401, {error:"Refresh token not provided."})
+    }
+    try {
+            const token=Token.refreshToken(client_refreshtoken)
+        res.sendData(200, {token:token});
+    } catch (error) {
+        res.sendData(401, {error: `${error}`});
+    }
+}
 
   static async signupUser(req, res) {
     const { username, password, email, confirm_password, firstName, lastName } =
