@@ -3,6 +3,7 @@ import { userDAO } from "../dao/userDAO.js";
 
 class AuthController {
   static async loginUser(req, res) {
+    console.log("User Requested")
     const { username, password } = req.body;
     if (!username || !password) {
       res.sendData(401, {

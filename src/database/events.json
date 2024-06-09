@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "id": "e2acad96-6da5-4590-bf93-7885beb14a26",
+        "title": "Yoga Retreat",
+        "description": "Join us for a rejuvenating yoga retreat amidst nature.",
+        "category": "JPT",
+        "totalParticipants": 20,
+        "startDate": "2024-07-15",
+        "endDate": "2024-07-20",
+        "location": "Mountain View Retreat Center"
+    },
+    {
+        "id": "95173ae3-50f5-4608-854d-db45ba54390f",
+        "title": "Cooking Class: Italian Cuisine",
+        "description": "Learn to cook authentic Italian dishes from a professional chef.",
+        "category": "Food & Drink",
+        "totalParticipants": 15,
+        "startDate": "2024-06-25",
+        "endDate": "2024-06-26",
+        "location": "Taste of Italy Culinary School"
+    }
+]
