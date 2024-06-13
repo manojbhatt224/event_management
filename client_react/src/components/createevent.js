@@ -64,7 +64,7 @@ const CreateEventForm = () => {
     e.preventDefault();
     if (validateData(e)) {
       try {
-        const myNewEvent = await createEvent(eventData);
+        await createEvent(eventData);
       } catch (err) {
         setErrorText("Can't create event: Network Error");
       } finally {

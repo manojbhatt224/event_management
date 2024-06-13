@@ -42,45 +42,44 @@ export function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             {/* <li className="nav-item">
-              <a className="nav-link text-dark" aria-current="page" href="#">
+              <a className="nav-link text-dark" aria-current="page"
                 Home
               </a>
             </li> */}
             {/* <li className="nav-item">
-              <a className="nav-link tex-dark width-5" href="#">
+              <a className="nav-link tex-dark width-5"
                 New Event
               </a>
             </li> */}
           </ul>
           <ul className="navbar-nav text-dark">
           <li className="nav-item dropdown">
-              <a
+              <p
                 className="nav-link dropdown-toggle"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 {userState.username}
-              </a>
+              </p>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item disabled" href="#" >
+                  <p className="dropdown-item disabled">
                     Change Password
-                  </a>
+                  </p>
                 </li>
                 <li>
-                  <a className="dropdown-item disabled"  href="#">
+                  <p className="dropdown-item disabled"> 
                     Show my profile
-                  </a>
+                  </p>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a onClick={logout} className="dropdown-item" href="#">
+                  <p onClick={logout} className="dropdown-item">
                     Log Out
-                  </a>
+                  </p>
                 </li>
               </ul>
             </li>

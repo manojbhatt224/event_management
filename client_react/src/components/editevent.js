@@ -17,7 +17,7 @@ const EditEventForm = () => {
   const [valErrors, setValErrors] = useState({});
   const [errorText, setErrorText] = useState(null);
   const [loading, setLoading] = useAtom(loadingAtom);
-  const [error, setError] = useAtom(errorAtom);
+  const [error] = useAtom(errorAtom);
   const [success]=useAtom(successAtom);
   const [eventData, setEventData] = useState({
     title: "",
@@ -83,7 +83,7 @@ const EditEventForm = () => {
     if (validateData(e)) {
       try {
         const {id, ...updateData}=eventData
-        const response=await updateEvent(eventData.id, updateData)
+        await updateEvent(eventData.id, updateData)
       } catch (err) {
         setErrorText("Can't Update: Network or Data Error!");
       } finally {

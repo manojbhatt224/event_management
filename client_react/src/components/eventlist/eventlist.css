@@ -1,0 +1,29 @@
+.col{
+    display:flex;
+    flex-direction: row;
+}
+.filter-wrapper{
+    display:flex;
+    flex-direction: row;
+   margin:5px;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .f-input-field {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 5px;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    color: #555;
+  }
+  

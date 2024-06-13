@@ -10,7 +10,7 @@ function Login() {
   const [password, setPassword] = useState("");
   const [errorText, setErrorText] = useState("NOERROR");
   const [loading, setLoading] = useAtom(loadingAtom);
-  const [error, setError] = useAtom(errorAtom);
+  const [error] = useAtom(errorAtom);
 
   const login = useLogin();
   const handleChange = (event) => {
@@ -28,7 +28,7 @@ function Login() {
         return;
       }
 
-      const response = await login(username, password);
+      await login(username, password);
     } catch (error) {
       setErrorText(error.data.error);
     } finally {

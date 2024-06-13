@@ -6,14 +6,15 @@ import SignUp from "../../components/signup/signup.js";
 
 function Auth() {
   var [signup, setSignUp] = useState(false);
-  var title="Event Management System";
   const togglePage = () => {
     setSignUp(!signup);
   };
 
   return (
     <div className="app">
+        <h4 style={{color:"white"}}>Event Management System</h4>
         <div className="auth">
+        
         {!signup?<Login />:<SignUp/>}
 
         <span className="toggle-label" onClick={togglePage}

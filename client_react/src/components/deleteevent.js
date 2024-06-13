@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { useDeleteEvent } from "../requests/eventRequests.js";
 import { loadingAtom, successAtom } from "../stores/statestore.js";
 import { errorAtom } from "../stores/statestore.js";
@@ -23,7 +23,7 @@ const DeleteEventForm = () => {
   const handleDeleteConfirmation = async () => {
    
       try {
-        const response=await deleteEvent(params.id)
+        await deleteEvent(params.id)
       } catch (err) {
         setErrorText("Can't Update: Network or Data Error!");
       } finally {
