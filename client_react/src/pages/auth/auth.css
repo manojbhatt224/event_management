@@ -1,0 +1,74 @@
+
+
+.app{
+    background-color: #0C2034;
+    background-size: cover;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    height:100vh;
+    align-items:center;
+  justify-content:center;
+  
+  }
+
+  .auth{
+    padding:10px;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+   flex-direction: column;
+    display:flex;
+    height:500px;
+    border-bottom-left-radius:10% ;
+    border-bottom-right-radius:10% ;
+    align-items:center;
+    justify-content:center;
+  
+  }
+  
+ .toggle-label{
+  
+    position: fixed;
+    bottom: 17%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+ 
+  @media (min-width: 768px){
+    .title{
+      width: 40%;
+    }
+    .auth {
+        width: 40%; /* Or any other width you desire */
+    }
+  }
+  @media (min-width: 500px) and (max-width: 768px) {
+    .title{
+      width: 50%;
+    }
+    .auth {
+        width: 50%; /* Or any other width you desire */
+    }
+  }
+  @media (min-width: 300px) and (max-width: 500px) {
+    .title{
+      width: 65%;
+    }
+    .auth {
+      height:450px;
+        width: 65%; /* Or any other width you desire */
+    }
+  }
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 300px) {
+    .title{
+      width: 95%;
+    }
+    .auth {
+        width: 95%; /* Or any other width you desire */
+    }
+  }

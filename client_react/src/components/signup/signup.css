@@ -1,0 +1,33 @@
+.inputFields{
+    display:flex;
+   
+    justify-content: space-between;
+    margin-top: 5x;
+    margin-bottom: 5px;
+
+    width:80%;
+}
+
+.subFields{
+    display:flex;
+    flex-direction:column;
+}
+.inputFields .subFields input{
+margin:2px;
+height:25px;
+border-radius:5px;
+outline:none;
+}
+
+@media (min-width: 980px){
+    .inputFields{
+        flex-direction:row;
+    }
+
+  }
+ 
+  @media (max-width: 980px) {
+    .inputFields{
+        flex-direction:column;
+    }
+  }

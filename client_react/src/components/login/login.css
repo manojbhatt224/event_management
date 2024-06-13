@@ -1,0 +1,21 @@
+.inputField{
+    display:flex;
+    flex-direction:column;
+    padding:5px;
+    margin:5px;
+    width:80%;
+}
+.inputField label{
+    margin:5px;
+
+}
+.inputField input{
+margin:5px;
+height:30px;
+padding-left:10px;
+border-radius:5px;
+outline:none;
+}
+form{
+    width:100%;
+}
