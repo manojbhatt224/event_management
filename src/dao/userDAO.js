@@ -46,27 +46,19 @@ const userDAO = {
             });
   
             const newUserString = JSON.stringify(sortedUser);
-
-    
             if (fs.existsSync(usersFilePath)) {
                 let existingContent = fs.readFileSync(usersFilePath, 'utf8');
              if (existingContent.endsWith(']')) {
                     existingContent = existingContent.slice(0, -1);
                 }
-
-                // Append the new user object to the existing content
                 const updatedContent = existingContent + (existingContent.endsWith('[') ? '' : ',\n') + newUserString;
-
-                // Write the updated content back to the file
                 fs.writeFileSync(usersFilePath, updatedContent + ']', 'utf8');
             } else {
-                // If the file doesn't exist, create a new file with the new user object
                 fs.writeFileSync(usersFilePath, `[${newUserString}]`, 'utf8');
             }
 
             return newUser;
         } catch (error) {
-            console.error('Error creating user:', error);
             return null;
         }
     }

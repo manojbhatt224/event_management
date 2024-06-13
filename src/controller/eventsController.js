@@ -30,7 +30,6 @@ return updateData;
 }
 class EventsController {
   static isValidDate(dateString) {
-    // Regular expression to validate date format YYYY-MM-DD
     const regex = /^\d{4}-\d{2}-\d{2}$/;
     return regex.test(dateString);
 }
@@ -73,7 +72,7 @@ return errors;
     endDate,
     location){
       const errors = {};
-      if (!title || title !== 'string') {
+      if (!title || typeof title !== 'string') {
           errors.title = 'Title is required and must be a string';
       }
     if (!category || typeof category !== 'string') {
@@ -157,7 +156,7 @@ return errors;
     const id = req.params.id;
     const event=await eventDAO.getEventByCriteria({id:id})
     if (event){
-      res.sendData(200,{event:event})
+      res.sendData(200,{event:event[0]})
     }
     else{
       res.sendData(200,{event:null})

@@ -4,6 +4,8 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
+client_react/node_modules/
+client_react/package-lock.json
 node_modules/
 dist/
 package-lock.json
