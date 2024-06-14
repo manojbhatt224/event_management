@@ -134,6 +134,37 @@ export const useUpdateEvent=()=>{
 
 }
 
+export const useFilterEvent=()=>{
+  const [, setLoading] = useAtom(loadingAtom);
+  const [, setError] = useAtom(errorAtom);
+  const [authState,]=useAtom(authStateAtom)
+
+  const filterEvent = async (filterData) => {
+    setLoading(true);
+    await new Promise(resolve => {
+      setTimeout(resolve, 100);})   //process time simulation
+    try {
+      const response = await EventApi.filterEvent(authState.accessToken, {filterData});
+      if (response.data.msg) {
+        return response.data.data.events
+      }
+
+    } catch (error) {
+      setError(true);
+      if (!error.response) {
+          error.response = { data: {error: "Network Error"} };
+          throw error.response;
+        }
+        else{
+          throw error.response.data;
+      }
+        
+      
+    }
+  };
+  return filterEvent;
+
+}
 
 export const useDeleteEvent=()=>{
   const [, setLoading] = useAtom(loadingAtom);

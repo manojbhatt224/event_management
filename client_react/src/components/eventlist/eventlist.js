@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
 import { loadingAtom, errorAtom } from "../../stores/statestore.js";
 import { Link } from "react-router-dom";
-import { useGetEvents } from "../../requests/eventRequests.js";
+import { useGetEvents, useFilterEvent } from "../../requests/eventRequests.js";
 import LoadingSpinner from "../loadingspinner/loadingspinner.js";
 import ErrorDisplay from "../errordisplay/errordisplay.js";
 import "./eventlist.css";
@@ -14,6 +14,7 @@ export function EventList() {
   const [error] = useAtom(errorAtom);
   const [events, setEvents] = useState(null);
   const getEvents = useGetEvents();
+  const filterEvent=useFilterEvent();
   const fetchEvents = async () => {
     try {
       const myEvents = await getEvents();
@@ -24,6 +25,16 @@ export function EventList() {
       setLoading(false);
     }
   };
+  const getFilteredEvents=async()=>{
+    try {
+      const myEvents = await filterEvent(filter);
+      setEvents(myEvents);
+    } catch (err) {
+      setErrorText(err.data.error);
+    } finally {
+      setLoading(false);
+    }
+  }
   const resetFilters=()=>{
     setFilter({title:'', startDate:'', endDate:''});
 
@@ -36,8 +47,14 @@ export function EventList() {
     fetchEvents();
   }, []);
   useEffect(() => {
-    if (filter.title || (filter.startDate && filter.endDate)) 
-        fetchEvents(); 
+    
+    if (filter.title || (filter.startDate && filter.endDate)) { 
+      getFilteredEvents(filter); 
+      }
+    
+      else if(!filter.title || !(filter.startDate && filter.endDate)){
+        fetchEvents();
+      }
 }, [filter]);
 
   return (

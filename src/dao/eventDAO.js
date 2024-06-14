@@ -16,7 +16,8 @@ const keyOrder = [
 const eventDAO = {
   getAllEvents() {
     try {
-      return jsonfile.readFileSync(getEntityLocation("events"));
+      const myevents= jsonfile.readFileSync(getEntityLocation("events"));
+      return myevents.sort((event1,event2)=>{return (new Date(event2.startDate).getTime()-new Date(event1.startDate).getTime())})
     } catch (error) {
       return null;
     }
@@ -36,7 +37,7 @@ const eventDAO = {
       const eventEndDate = new Date(event.endDate);
       const filterStartDate = new Date(startDate);
       const filterEndDate = new Date(endDate);
-      return eventStartDate >= filterStartDate && eventEndDate <= filterEndDate;
+      return eventStartDate.getTime() >= filterStartDate.getTime() && eventEndDate.getTime() <= filterEndDate.getTime();
     });
     return filteredEvents;
   },
@@ -53,13 +54,10 @@ const eventDAO = {
     return filteredEvents;
   },
   searchEventsByTitleAndDate(startDate, endDate, titleKeyword) {
-    const titleSearchResults = this.searchEventsByTitle(titleKeyword);
-    const dateRangeResults = this.filterEventsByDate(startDate, endDate);
-
-    const searchResults = titleSearchResults.filter((event) =>
-      dateRangeResults.some((e) => e.id === event.id)
-    );
-
+    const titleSearchResults = this.searchEventByTitle(titleKeyword);
+    const dateRangeResults = this.getEventByDateRange(startDate, endDate);
+    const searchResults = titleSearchResults.filter((obj1) =>
+      dateRangeResults.some(obj2=>obj2.id===obj1.id));
     return searchResults;
   },
 

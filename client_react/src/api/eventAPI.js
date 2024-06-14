@@ -35,3 +35,12 @@ export const createEvent=(accessToken, event)=>API.post('/api/events', JSON.stri
             'Content-Type': `application/json`    
             }
             })
+            
+  export const filterEvent=(accessToken, filterData)=>API.get('/api/events/filter', { 
+              params:filterData,
+              headers: {
+                'Authorization': `Bearer ${accessToken}`,
+              'Content-Type': `application/json`    
+              }
+              
+              })
