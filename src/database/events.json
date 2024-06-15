@@ -1,43 +1,13 @@
 [
     {
-        "id": "e2acad96-6da5-4590-bf93-7885beb14a26",
-        "title": "Yoga Retreat",
-        "description": "Join us for a rejuvenating yoga retreat amidst nature.",
-        "category": "JPT",
-        "totalParticipants": 20,
-        "startDate": "2024-07-15",
-        "endDate": "2024-07-20",
-        "location": "Mountain View Retreat Center"
-    },
-    {
-        "id": "95173ae3-50f5-4608-854d-db45ba54390f",
-        "title": "Edited 7 Cooking Class: Italian Cuisine",
-        "description": "Learn to cook authentic Italian dishes from a professional chef.",
+        "id": "3d8c9826-7c91-4a06-99a2-8dbdf0de12cb",
+        "title": "Cooking Class: Thai Cuisine",
+        "description": "Discover the secrets of authentic Thai cooking with a master chef.",
         "category": "Food & Drink",
         "totalParticipants": 15,
-        "startDate": "2024-06-25",
-        "endDate": "2024-06-26",
-        "location": "Taste of Italy Culinary School"
-    },
-    {
-        "id": "8b8c37b3-fc1e-494f-9cb4-09c3a4bfc2f4",
-        "title": "Art Workshop: Acrylic Painting",
-        "description": "Learn to paint vibrant acrylic artworks from a professional artist.",
-        "category": "Arts & Crafts",
-        "totalParticipants": 12,
-        "startDate": "2024-06-26",
-        "endDate": "2024-06-27",
-        "location": "Creative Arts Center"
-    },
-    {
-        "id": "4c09d944-cf4f-4574-a44a-46f9d77cf4a9",
-        "title": "Music Concert: Jazz Night",
-        "description": "Enjoy an evening of smooth jazz performances by talented musicians.",
-        "category": "Music",
-        "totalParticipants": 50,
-        "startDate": "2024-06-27",
-        "endDate": "2024-06-27",
-        "location": "Groove Lounge"
+        "startDate": "2024-06-29",
+        "endDate": "2024-06-30",
+        "location": "Thai Taste Cooking School"
     },
     {
         "id": "f5e1da54-60cd-464e-84b4-460647894e39",
@@ -50,13 +20,33 @@
         "location": "Tech Hub Conference Room"
     },
     {
-        "id": "3d8c9826-7c91-4a06-99a2-8dbdf0de12cb",
-        "title": "Cooking Class: Thai Cuisine",
-        "description": "Discover the secrets of authentic Thai cooking with a master chef.",
+        "id": "4c09d944-cf4f-4574-a44a-46f9d77cf4a9",
+        "title": "Music Concert: Jazz Night",
+        "description": "Enjoy an evening of smooth jazz performances by talented musicians.",
+        "category": "Music",
+        "totalParticipants": 50,
+        "startDate": "2024-06-27",
+        "endDate": "2024-06-27",
+        "location": "Groove Lounge"
+    },
+    {
+        "id": "8b8c37b3-fc1e-494f-9cb4-09c3a4bfc2f4",
+        "title": "Art Workshop: Acrylic Painting",
+        "description": "Learn to paint vibrant acrylic artworks from a professional artist.",
+        "category": "Arts & Crafts",
+        "totalParticipants": 12,
+        "startDate": "2024-06-26",
+        "endDate": "2024-06-27",
+        "location": "Creative Arts Center"
+    },
+    {
+        "id": "95173ae3-50f5-4608-854d-db45ba54390f",
+        "title": "Edited 7 Cooking Class: Italian Cuisine",
+        "description": "Learn to cook authentic Italian dishes from a professional chef.",
         "category": "Food & Drink",
         "totalParticipants": 15,
-        "startDate": "2024-06-29",
-        "endDate": "2024-06-30",
-        "location": "Thai Taste Cooking School"
+        "startDate": "2024-06-25",
+        "endDate": "2024-06-26",
+        "location": "Taste of Italy Culinary School"
     }
 ]

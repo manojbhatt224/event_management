@@ -8,7 +8,7 @@ import ErrorDisplay from "../errordisplay/errordisplay.js";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errorText, setErrorText] = useState("NOERROR");
+  const [errorText, setErrorText] = useState("SESSION_EXPIRED");
   const [loading, setLoading] = useAtom(loadingAtom);
   const [error] = useAtom(errorAtom);
 

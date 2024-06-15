@@ -1,45 +1,77 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+# Event Management System
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+It allows organizers/users to perform CRUD operations on events with authenticated set of users. Instead of using a database, the application stores data in a JSON file.
 
----
 
-## Edit a file
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+## Features
+- CRUD Operations: Users can create, read, update, and delete events.
+- Validation: Both client-side and server-side validation are implemented to ensure data integrity.
+- Filtering: Users can filter events by title, start date, and end date.
+- Only authenticated users can perform CRUD operations.
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+## Setup Instructions
+The repository contains direct entry to backend environment and front end client server is located in client_react directory.
 
----
+1. Clone the repository
 
-## Create a file
+```bash
+git clone https://manojbhatt224-admin@bitbucket.org/manojbhatt224/yipl-log-processor.git
+```
+2. Navigate to project directory and install packages/dependencies
 
-Next, you’ll add a new file to this repository.
+```bash
+cd yipl-log-processor
+npm install
+``` 
+3. Start the server
+```bash
+npm run start
+```
+4. Open a new terminal tab, navigate to the client directory and install dependencies:
+```bash
+cd client_react
+npm install 
+```
+5. Start the client
+```bash
+npm start
+```
+6. Access the application in your browser at http://localhost:3000.
+Note: (open users.json file in see any login credentials. Focus on login authentication and other crud operation is done. Backend api for signup but not in front end.)
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+## Screenshots
+### Login Page
+![App Screenshot](images/login.png)
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+### Invalid Login
+![App Screenshot](images/invalid_login.png)
 
----
+### Dashboard
+![App Screenshot](images/dashboard.png)
 
-## Clone a repository
+### Session Expire
+![App Screenshot](images/session_expire.png)
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+### Add Event
+![App Screenshot](images/add_event.png)
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+### Invalid Add Event
+![App Screenshot](images/invalid_create_event.png)
+
+### Edit Event
+![App Screenshot](images/edit_event.png)
+
+### Invalid Edit Event
+![App Screenshot](images/invalid_edit_event.png)
+
+### Delete Event
+![App Screenshot](images/delete_confirm.png)
+
+### Filter Event
+![App Screenshot](images/filter_event.png)
+
+### Event Not Found
+![App Screenshot](images/event_not_found.png)

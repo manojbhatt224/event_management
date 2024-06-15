@@ -33,12 +33,14 @@ class AuthController {
     if (!client_refreshtoken) {
         res.sendData(401, {error:"Refresh token not provided."})
     }
+    else{
     try {
             const token=Token.refreshToken(client_refreshtoken)
         res.sendData(200, {token:token});
     } catch (error) {
         res.sendData(401, {error: `${error}`});
     }
+  }
 }
 
   static async signupUser(req, res) {
