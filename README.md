@@ -17,12 +17,12 @@ The repository contains direct entry to backend environment and front end client
 1. Clone the repository
 
 ```bash
-git clone https://manojbhatt224-admin@bitbucket.org/manojbhatt224/yipl-log-processor.git
+git clone https://manojbhatt224-admin@bitbucket.org/manojbhatt224/event_management.git
 ```
 2. Navigate to project directory and install packages/dependencies
 
 ```bash
-cd yipl-log-processor
+cd event_management
 npm install
 ``` 
 3. Start the server
